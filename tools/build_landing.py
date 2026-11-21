@@ -5,6 +5,7 @@ Run from the project root:  python3 tools/build_landing.py
 Copy edits go in PAGES below; layout lives in TEMPLATE.
 """
 import html
+import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -44,6 +45,7 @@ COMMON_FAQ = [
 PAGES = [
     dict(
         slug="live", source="live", focus="live", plans="live", mode="pay",
+        course_name="Live GeM Classes", prices=["3999"],
         plan_sub="Live classes ₹3,999। Payment Razorpay के secure checkout पर होगा। Batch की start date और timing payment से पहले WhatsApp पर confirm करें।",
         title="Live GeM Classes — ₹3,999 | The Growth Adda",
         desc="GeM का process live classes में सीखिए। ₹3,999। Registration, tender documents और bid submission step by step.",
@@ -60,6 +62,7 @@ PAGES = [
     ),
     dict(
         slug="recorded", source="recorded", focus="recorded", plans="recorded", mode="pay",
+        course_name="Recorded GeM Course", prices=["1999"],
         plan_sub="Recorded sessions ₹1,999। Access और support की details payment से पहले WhatsApp पर confirm करें।",
         title="Recorded GeM Course — ₹1,999 | The Growth Adda",
         desc="GeM course recorded sessions में। ₹1,999। अपनी speed से process सीखिए।",
@@ -76,6 +79,7 @@ PAGES = [
     ),
     dict(
         slug="shop-owners", source="shop-owners", focus="live", plans="all", mode="link",
+        course_name="GeM Course for Shop Owners & Suppliers", prices=["1999", "3999"],
         plan_sub="Recorded sessions ₹1,999 · Live classes ₹3,999। Format चुनकर उसके page पर enroll करें।",
         title="दुकानदारों के लिए GeM Course | The Growth Adda",
         desc="Shop owners और suppliers के लिए GeM का practical course। Registration, documents और bids का process.",
@@ -92,6 +96,7 @@ PAGES = [
     ),
     dict(
         slug="beginners", source="beginners", focus="recorded", plans="all", mode="link",
+        course_name="GeM Course for Beginners", prices=["1999", "3999"],
         plan_sub="Recorded sessions ₹1,999 · Live classes ₹3,999। Format चुनकर उसके page पर enroll करें।",
         title="GeM Beginners Course | The Growth Adda",
         desc="GeM बिल्कुल शुरू से सीखिए। Beginners के लिए step-by-step course।",
@@ -116,6 +121,8 @@ TEMPLATE = """<!DOCTYPE html>
   <meta name="theme-color" content="#2C3777">
   <meta name="color-scheme" content="light">
   <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="The Growth Adda">
   <title>{title}</title>
   <meta name="description" content="{desc}">
   <link rel="canonical" href="{site}/{slug}.html">
@@ -137,6 +144,9 @@ TEMPLATE = """<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+{jsonld}
+  </script>
 </head>
 <body data-source="{source}" data-focus-plan="{focus}">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -333,6 +343,52 @@ def faqs_html(items):
     return "\n\n".join(out)
 
 
+ORG = {
+    "@type": "EducationalOrganization",
+    "name": "The Growth Adda",
+    "url": SITE + "/",
+    "logo": SITE + "/assets/og.png",
+    "sameAs": ["https://www.instagram.com/thegrowthadda.in/"],
+}
+
+
+def jsonld_block(p):
+    """Build @graph structured data (Course + BreadcrumbList + FAQPage) for a page."""
+    url = f"{SITE}/{p['slug']}.html"
+    offers = [
+        {"@type": "Offer", "price": price, "priceCurrency": "INR",
+         "availability": "https://schema.org/InStock", "category": "Paid"}
+        for price in p["prices"]
+    ]
+    course = {
+        "@type": "Course",
+        "name": p["course_name"],
+        "description": p["desc"],
+        "inLanguage": ["hi-IN", "en"],
+        "url": url,
+        "provider": ORG,
+        "offers": offers if len(offers) > 1 else offers[0],
+    }
+    breadcrumb = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": p["course_name"], "item": url},
+        ],
+    }
+    faq = {
+        "@type": "FAQPage",
+        "inLanguage": "hi-IN",
+        "mainEntity": [
+            {"@type": "Question", "name": q,
+             "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in (p["faq"] + COMMON_FAQ)
+        ],
+    }
+    graph = {"@context": "https://schema.org", "@graph": [course, breadcrumb, faq]}
+    return json.dumps(graph, ensure_ascii=False, indent=2)
+
+
 def main():
     for p in PAGES:
         out = TEMPLATE.format(
@@ -343,6 +399,7 @@ def main():
             plans=p["plans"], focus=p["focus"], enq=ENQ,
             points=points_html(p["points"]),
             faqs=faqs_html(p["faq"] + COMMON_FAQ),
+            jsonld=jsonld_block(p),
             logo_dark=LOGO_DARK,
             logo_small=LOGO_DARK,
             logo_gold=LOGO_GOLD,

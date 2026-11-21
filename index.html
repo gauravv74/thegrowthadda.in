@@ -6,6 +6,8 @@
   <meta name="theme-color" content="#2C3777">
   <meta name="color-scheme" content="light">
   <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="The Growth Adda">
   <script>document.documentElement.className += " js";</script>
   <title>GeM Course — पहले सही Process सीखिए | The Growth Adda</title>
   <meta name="description" content="GeM पर registration, tender documents और bid submission का process समझिए। The Growth Adda का practical course। Batch details के लिए enquiry करें।">
@@ -32,16 +34,64 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "The Growth Adda",
-    "url": "https://thegrowthadda.in/",
-    "description": "Independent GeM learning for beginners, suppliers and working professionals.",
-    "publisher": {
-      "@type": "EducationalOrganization",
-      "name": "The Growth Adda",
-      "url": "https://thegrowthadda.in/",
-      "sameAs": "https://www.instagram.com/thegrowthadda.in/"
-    }
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://thegrowthadda.in/#org",
+        "name": "The Growth Adda",
+        "url": "https://thegrowthadda.in/",
+        "logo": "https://thegrowthadda.in/assets/og.png",
+        "image": "https://thegrowthadda.in/assets/og.png",
+        "description": "Independent GeM learning for beginners, suppliers and working professionals.",
+        "sameAs": ["https://www.instagram.com/thegrowthadda.in/"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://thegrowthadda.in/#website",
+        "name": "The Growth Adda",
+        "url": "https://thegrowthadda.in/",
+        "inLanguage": "hi-IN",
+        "description": "Independent GeM learning for beginners, suppliers and working professionals.",
+        "publisher": { "@id": "https://thegrowthadda.in/#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://thegrowthadda.in/#faqs",
+        "inLanguage": "hi-IN",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "क्या beginners यह course कर सकते हैं?",
+            "acceptedAnswer": { "@type": "Answer", "text": "हाँ। Course beginners के लिए भी है, जिनमें shop owners और working professionals शामिल हैं, जो GeM का process शुरू से समझना चाहते हैं। Course join करने से किसी bid की eligibility अपने आप नहीं बन जाती। Eligibility उसी tender की शर्तों पर निर्भर करती है।" }
+          },
+          {
+            "@type": "Question",
+            "name": "क्या manufacturer होना जरूरी है?",
+            "acceptedAnswer": { "@type": "Answer", "text": "नहीं। हर seller का manufacturer होना जरूरी नहीं है। GeM पर buyer, OEM और reseller की भूमिका अलग होती है। Reseller के लिए authorisation कई categories में माँगी जाती है, और कुछ bids में OEM खुद participate करता है। कौन सी role लागू होती है, यह category और bid conditions से तय होता है।" }
+          },
+          {
+            "@type": "Question",
+            "name": "क्या course के बाद order मिलना guaranteed है?",
+            "acceptedAnswer": { "@type": "Answer", "text": "नहीं। Course में process सिखाया जाता है। Participation से eligibility, tender award या income guaranteed नहीं होती। नतीजा official bid conditions, documents, pricing और buyer की evaluation पर निर्भर करता है।" }
+          },
+          {
+            "@type": "Question",
+            "name": "क्या OEM authorisation हर bid में जरूरी है?",
+            "acceptedAnswer": { "@type": "Answer", "text": "हर bid में नहीं। OEM authorisation की जरूरत product category, seller की role और उस bid की शर्तों पर निर्भर करती है। कुछ bids manufacturer से जुड़ी होती हैं, कुछ authorised reseller से। Bid document में जो लिखा हो, वही लागू होता है।" }
+          },
+          {
+            "@type": "Question",
+            "name": "क्या pre-bid list course में included है?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Pre-bid meetings को समझना और questions तैयार करना proposed curriculum में है। City-wise pre-bid list course में included है या नहीं, यह अभी confirm नहीं है। Included का claim तभी होगा जब batch details में यह साफ लिखा हो।" }
+          },
+          {
+            "@type": "Question",
+            "name": "Fee, batch timing और support details कैसे मिलेंगी?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Upcoming batch की fee, start date, duration, live या recorded format, teaching language और support की जानकारी WhatsApp enquiry पर दी जाती है। इस page पर सिर्फ confirmed details दिखाई जाती हैं। अपना experience और business category लिखकर message करें।" }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
