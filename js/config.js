@@ -21,7 +21,7 @@ window.SITE_CONFIG = {
     courseEnquiry:
       "https://wa.me/918007974088?text=Hi%20Growth%20Adda%2C%20please%20share%20your%20GeM%20course%20fees%2C%20syllabus%20and%20upcoming%20batch%20details.",
     masterclassEnquiry:
-      "https://wa.me/918007974088?text=Hi%20Growth%20Adda%2C%20I%20want%20to%20join%20the%20%E2%82%B949%20GeM%20masterclass%20on%20Saturday%2021%20November%20at%2010%20AM.",
+      "https://wa.me/918007974088?text=Hi%20Growth%20Adda%2C%20I%20want%20to%20join%20the%20%E2%82%B949%20GeM%20masterclass%20on%20Sunday%2029%20November%20at%2010%20AM.",
     cityListRequest:
       "https://wa.me/918007974088?text=Hi%20Growth%20Adda%2C%20please%20share%20the%20pre-bid%20list%20for%20my%20city.",
     whatsappNumber: "918007974088",
