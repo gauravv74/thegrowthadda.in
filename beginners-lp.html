@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2C3777">
+  <meta name="color-scheme" content="light">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="The Growth Adda">
+  <title>GeM Beginners Course — ₹1,999 से शुरू | The Growth Adda</title>
+  <meta name="description" content="GeM पर अपना business शुरू करें। Registration से bid submission तक complete course। ₹1,999 से शुरू।">
+  <link rel="canonical" href="https://thegrowthadda.in/beginners-lp.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ── Page-level overrides ── */
+    * { box-sizing: border-box; }
+
+    /* HEADER */
+    .lp2-header {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e7eaf2;
+      padding: 0 1.5rem;
+      height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 100%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .lp2-brand { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; }
+    .lp2-brand span { font-size: 1rem; font-weight: 700; color: #223072; }
+    .lp2-header-btn {
+      background: #f2b63c; color: #1c2340;
+      font-size: 0.9375rem; font-weight: 700;
+      padding: 0.625rem 1.5rem;
+      border-radius: 8px; text-decoration: none;
+      white-space: nowrap;
+      border: none; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .lp2-header-btn:hover { background: #e4a52c; }
+
+    /* HERO */
+    .lp2-hero {
+      background: linear-gradient(135deg, #1a2456 0%, #2c3777 60%, #1a2456 100%);
+      padding: 4rem 1.5rem 5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .lp2-hero-inner { max-width: 760px; margin: 0 auto; }
+
+    .lp2-pill {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(242,182,60,0.18);
+      border: 1px solid rgba(242,182,60,0.4);
+      color: #ffd25a;
+      font-size: 0.875rem; font-weight: 600;
+      padding: 0.4rem 1.1rem; border-radius: 50px;
+      margin-bottom: 1.75rem;
+    }
+
+    .lp2-hero h1 {
+      font-size: clamp(1.875rem, 5vw, 3rem);
+      font-weight: 800; line-height: 1.18;
+      color: #fff; margin: 0 0 1.25rem;
+    }
+    .lp2-hero h1 span { color: #f2b63c; display: block; }
+
+    .lp2-hero p {
+      font-size: clamp(1rem, 2.5vw, 1.1875rem);
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7; margin: 0 auto 2.25rem;
+      max-width: 620px;
+    }
+
+    .lp2-quick-features {
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .lp2-qf {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 0.5rem 1rem; border-radius: 8px;
+      font-size: 0.9375rem; font-weight: 500;
+    }
+
+    .lp2-hero-cta {
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .lp2-btn-primary {
+      background: #f2b63c; color: #1c2340;
+      font-size: 1.125rem; font-weight: 800;
+      padding: 1rem 2.5rem; border-radius: 10px;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(242,182,60,0.4);
+    }
+    .lp2-btn-primary:hover { background: #e4a52c; transform: translateY(-2px); }
+    .lp2-btn-secondary {
+      background: transparent; color: #fff;
+      font-size: 1.0625rem; font-weight: 600;
+      padding: 1rem 2rem; border-radius: 10px;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.2s;
+    }
+    .lp2-btn-secondary:hover { border-color: #f2b63c; color: #f2b63c; }
+
+    .lp2-secure {
+      font-size: 0.875rem; color: rgba(255,255,255,0.6);
+    }
+
+    /* STATS BAR */
+    .lp2-stats {
+      background: #fff;
+      border-bottom: 1px solid #e7eaf2;
+      padding: 2rem 1.5rem;
+    }
+    .lp2-stats-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @media(min-width:600px){ .lp2-stats-inner { grid-template-columns: repeat(4,1fr); } }
+    .lp2-stat { text-align: center; padding: 1.25rem; border-radius: 12px; background: #f5f7fc; }
+    .lp2-stat-num { font-size: 2rem; font-weight: 800; color: #f2b63c; line-height: 1; margin-bottom: 0.25rem; }
+    .lp2-stat-label { font-size: 0.875rem; color: #6b7390; font-weight: 500; }
+
+    /* SECTIONS */
+    .lp2-section { padding: 4rem 1.5rem; }
+    .lp2-section-alt { background: #f5f7fc; }
+    .lp2-inner { max-width: 1100px; margin: 0 auto; }
+
+    .lp2-section-label {
+      font-size: 0.8125rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: #f2b63c; margin-bottom: 0.75rem;
+    }
+    .lp2-section h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+      font-weight: 800; color: #223072;
+      margin: 0 0 0.75rem; line-height: 1.25;
+    }
+    .lp2-section .lp2-sub {
+      font-size: 1.0625rem; color: #6b7390; margin: 0 0 2.5rem; line-height: 1.6;
+    }
+
+    /* FEATURES GRID */
+    .lp2-features {
+      display: grid; gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .lp2-feat {
+      background: #fff; border: 1.5px solid #e7eaf2;
+      border-radius: 14px; padding: 1.75rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .lp2-feat:hover { border-color: #f2b63c; box-shadow: 0 4px 20px rgba(242,182,60,0.15); }
+    .lp2-feat-icon { font-size: 2rem; margin-bottom: 0.875rem; }
+    .lp2-feat h3 { font-size: 1.125rem; font-weight: 700; color: #223072; margin: 0 0 0.5rem; }
+    .lp2-feat p { font-size: 0.9375rem; color: #6b7390; line-height: 1.6; margin: 0; }
+
+    /* CURRICULUM */
+    .lp2-curriculum {
+      display: grid; gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .lp2-module {
+      background: #fff; border: 1.5px solid #e7eaf2;
+      border-radius: 12px; padding: 1.5rem;
+      display: flex; gap: 1rem; align-items: flex-start;
+    }
+    .lp2-mod-num {
+      background: #f2b63c; color: #1c2340;
+      font-size: 0.8125rem; font-weight: 800;
+      min-width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .lp2-mod-text h4 { font-size: 1rem; font-weight: 700; color: #223072; margin: 0 0 0.25rem; }
+    .lp2-mod-text p { font-size: 0.875rem; color: #6b7390; margin: 0; line-height: 1.5; }
+
+    /* PRICING */
+    .lp2-pricing-section {
+      background: linear-gradient(135deg, #1a2456 0%, #2c3777 100%);
+      padding: 4rem 1.5rem;
+    }
+    .lp2-pricing-head { text-align: center; margin-bottom: 3rem; }
+    .lp2-pricing-head .lp2-section-label { color: #f2b63c; }
+    .lp2-pricing-head h2 { color: #fff; font-size: clamp(1.5rem,3.5vw,2.25rem); margin: 0 0 0.75rem; }
+    .lp2-pricing-head p { color: rgba(255,255,255,0.75); font-size: 1.0625rem; }
+
+    .lp2-cards {
+      display: grid; gap: 2rem;
+      max-width: 900px; margin: 0 auto;
+    }
+    @media(min-width:720px){ .lp2-cards { grid-template-columns: repeat(2,1fr); } }
+
+    .lp2-card {
+      background: #fff; border-radius: 20px;
+      padding: 2.25rem 2rem;
+      display: flex; flex-direction: column;
+      position: relative;
+    }
+    .lp2-card-popular {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: #f2b63c; color: #1c2340;
+      font-size: 0.8125rem; font-weight: 800;
+      padding: 0.35rem 1.25rem; border-radius: 50px;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(242,182,60,0.5);
+    }
+    .lp2-card-featured { border: 3px solid #f2b63c; }
+
+    .lp2-card-type {
+      font-size: 0.8125rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: #6b7390; margin-bottom: 0.5rem;
+    }
+    .lp2-card h3 { font-size: 1.5rem; font-weight: 800; color: #223072; margin: 0 0 1.5rem; }
+    .lp2-card-price { font-size: 3rem; font-weight: 900; color: #223072; line-height: 1; margin-bottom: 0.375rem; }
+    .lp2-card-price-note { font-size: 0.875rem; color: #6b7390; margin-bottom: 1.75rem; }
+
+    .lp2-card-features {
+      list-style: none; padding: 0; margin: 0 0 2rem;
+      border-top: 1px solid #e7eaf2; padding-top: 1.5rem;
+      flex: 1;
+    }
+    .lp2-card-features li {
+      padding: 0.6rem 0;
+      font-size: 0.9375rem; color: #4c5570;
+      border-bottom: 1px solid #f0f2f8;
+      display: flex; align-items: center; gap: 0.625rem;
+    }
+    .lp2-card-features li:last-child { border-bottom: none; }
+    .lp2-card-features li::before {
+      content: '✓';
+      color: #5c8542; font-weight: 700; font-size: 1rem; flex-shrink: 0;
+    }
+
+    .lp2-card-pay { margin-top: auto; }
+    .lp2-card-pay form { margin: 0; width: 100%; }
+
+    /* Style the Razorpay iframe container */
+    .lp2-card-pay form iframe {
+      width: 100% !important;
+    }
+
+    .lp2-card-ask {
+      display: block; text-align: center;
+      margin-top: 0.875rem;
+      font-size: 0.9375rem; font-weight: 500;
+      color: #6b7390; text-decoration: none;
+      transition: color 0.2s;
+    }
+    .lp2-card-ask:hover { color: #223072; }
+
+    .lp2-card-note { font-size: 0.8125rem; color: #aab0c6; text-align: center; margin-top: 0.75rem; }
+
+    .lp2-secure-row {
+      display: flex; align-items: center; justify-content: center; gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.08);
+      border-radius: 14px;
+      max-width: 900px; margin-left: auto; margin-right: auto;
+      margin-top: 2.5rem;
+    }
+    .lp2-secure-item { display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.8); font-size: 0.9375rem; }
+
+    /* FAQ */
+    .lp2-faq-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); }
+    .lp2-faq-item { background: #fff; border: 1.5px solid #e7eaf2; border-radius: 14px; padding: 1.75rem; }
+    .lp2-faq-item h3 { font-size: 1rem; font-weight: 700; color: #223072; margin: 0 0 0.75rem; }
+    .lp2-faq-item p { font-size: 0.9375rem; color: #6b7390; line-height: 1.65; margin: 0; }
+
+    /* FINAL CTA */
+    .lp2-final {
+      background: #f5f7fc; padding: 4rem 1.5rem; text-align: center;
+    }
+    .lp2-final-box {
+      background: #fff; border: 2px solid #e7eaf2;
+      border-radius: 20px; padding: 3rem 2rem;
+      max-width: 680px; margin: 0 auto;
+      box-shadow: 0 4px 30px rgba(34,48,114,0.08);
+    }
+    .lp2-final-box h2 { font-size: clamp(1.375rem,3vw,2rem); font-weight: 800; color: #223072; margin: 0 0 0.875rem; }
+    .lp2-final-box p { font-size: 1.0625rem; color: #6b7390; margin: 0 0 2rem; line-height: 1.6; }
+    .lp2-final-trust { font-size: 0.875rem; color: #aab0c6; margin-top: 1.25rem; }
+
+    /* FOOTER */
+    .lp2-footer {
+      background: #fff; border-top: 1px solid #e7eaf2;
+      padding: 2rem 1.5rem; text-align: center;
+    }
+    .lp2-footer p { font-size: 0.8125rem; color: #aab0c6; margin: 0.375rem 0; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="lp2-header">
+    <a class="lp2-brand" href="index.html">
+      <svg width="32" height="32" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#1b2a63"/><rect x="8.5" y="21" width="5.4" height="10.5" rx="2.7" fill="#f2b63c"/><rect x="17.3" y="16" width="5.4" height="15.5" rx="2.7" fill="#f2b63c"/><rect x="26.1" y="11" width="5.4" height="20.5" rx="2.7" fill="#ffd25a"/><path d="M9 26 L16.5 20.5 L24 15.5 L31 9.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M25.5 9 L31.5 9 L31.5 15" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>The Growth Adda</span>
+    </a>
+    <a class="lp2-header-btn" href="#enroll">Enroll Now</a>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="lp2-hero">
+      <div class="lp2-hero-inner">
+
+        <div class="lp2-pill">
+          <span>🎓</span>
+          <span>Beginners Course · ₹1,999 से शुरू</span>
+        </div>
+
+        <h1>GeM पर Business<br><span>शुरू करना है?</span></h1>
+
+        <p>कोई experience नहीं? कोई बात नहीं। Registration, documents, bid submission—सरकारी business का पूरा process step by step सीखिए।</p>
+
+        <div class="lp2-quick-features">
+          <div class="lp2-qf"><span>📚</span><span>10+ Modules</span></div>
+          <div class="lp2-qf"><span>🗣️</span><span>Hindi + English</span></div>
+          <div class="lp2-qf"><span>♾️</span><span>Lifetime Access</span></div>
+          <div class="lp2-qf"><span>✅</span><span>Practical</span></div>
+        </div>
+
+        <div class="lp2-hero-cta">
+          <a href="#enroll" class="lp2-btn-primary">Enroll Now — ₹1,999 से</a>
+          <a href="#curriculum" class="lp2-btn-secondary">क्या सीखेंगे?</a>
+        </div>
+
+        <p class="lp2-secure">🔒 Secure payment via Razorpay &nbsp;·&nbsp; Instant access after payment</p>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="lp2-stats">
+      <div class="lp2-stats-inner">
+        <div class="lp2-stat">
+          <div class="lp2-stat-num">500+</div>
+          <div class="lp2-stat-label">Students</div>
+        </div>
+        <div class="lp2-stat">
+          <div class="lp2-stat-num">10+</div>
+          <div class="lp2-stat-label">Modules</div>
+        </div>
+        <div class="lp2-stat">
+          <div class="lp2-stat-num">2</div>
+          <div class="lp2-stat-label">Formats</div>
+        </div>
+        <div class="lp2-stat">
+          <div class="lp2-stat-num">₹1,999</div>
+          <div class="lp2-stat-label">से शुरू</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY THIS COURSE -->
+    <section class="lp2-section">
+      <div class="lp2-inner">
+        <p class="lp2-section-label">यह Course क्यों?</p>
+        <h2>Beginners के लिए बनाया गया</h2>
+        <p class="lp2-sub">Theory नहीं — real process, real examples, step by step।</p>
+        <div class="lp2-features">
+          <div class="lp2-feat">
+            <div class="lp2-feat-icon">🎯</div>
+            <h3>Zero Experience OK</h3>
+            <p>GeM के बारे में कुछ नहीं जानते? कोई बात नहीं। बिल्कुल शुरू से सिखाते हैं।</p>
+          </div>
+          <div class="lp2-feat">
+            <div class="lp2-feat-icon">📋</div>
+            <h3>Complete A to Z</h3>
+            <p>Registration से order fulfilment तक—हर step practically समझाया जाता है।</p>
+          </div>
+          <div class="lp2-feat">
+            <div class="lp2-feat-icon">🗣️</div>
+            <h3>Hindi + English</h3>
+            <p>आसान भाषा में। Technical terms English में, बाकी Hindi में।</p>
+          </div>
+          <div class="lp2-feat">
+            <div class="lp2-feat-icon">🎓</div>
+            <h3>Recorded या Live — आप चुनें</h3>
+            <p>₹1,999 में recorded, ₹3,999 में live classes। आपकी सुविधा के हिसाब से।</p>
+          </div>
+          <div class="lp2-feat">
+            <div class="lp2-feat-icon">♾️</div>
+            <h3>Lifetime Access</h3>
+            <p>Recorded course एक बार lो, lifetime देखो। Revise कभी भी।</p>
+          </div>
+          <div class="lp2-feat">
+            <div class="lp2-feat-icon">✅</div>
+            <h3>500+ Students</h3>
+            <p>500 से ज्यादा students पहले से सीख चुके हैं।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRICULUM -->
+    <section class="lp2-section lp2-section-alt" id="curriculum">
+      <div class="lp2-inner">
+        <p class="lp2-section-label">Curriculum</p>
+        <h2>आप क्या सीखेंगे</h2>
+        <p class="lp2-sub">10 modules में GeM का complete process।</p>
+        <div class="lp2-curriculum">
+          <div class="lp2-module">
+            <div class="lp2-mod-num">01</div>
+            <div class="lp2-mod-text">
+              <h4>GeM Basics</h4>
+              <p>GeM क्या है, buyer-seller roles, basic workflow।</p>
+            </div>
+          </div>
+          <div class="lp2-module">
+            <div class="lp2-mod-num">02</div>
+            <div class="lp2-mod-text">
+              <h4>Registration Process</h4>
+              <p>Seller registration, required documents, verification।</p>
+            </div>
+          </div>
+          <div class="lp2-module">
+            <div class="lp2-mod-num">03</div>
+            <div class="lp2-mod-text">
+              <h4>OEM vs Reseller</h4>
+              <p>Manufacturer और reseller की roles, authorisation।</p>
+            </div>
+          </div>
+          <div class="lp2-module">
+            <div class="lp2-mod-num">04</div>
+            <div class="lp2-mod-text">
+              <h4>Product Categories</h4>
+              <p>Category selection, specifications, catalogue।</p>
+            </div>
+          </div>
+          <div class="lp2-module">
+            <div class="lp2-mod-num">05</div>
+            <div class="lp2-mod-text">
+              <h4>Tender खोजना</h4>
+              <p>Relevant bids कैसे ढूँढें, filter करें।</p>
+            </div>
+          </div>
+          <div class="lp2-module">
+            <div class="lp2-mod-num">06</div>
+            <div class="lp2-mod-text">
+              <h4>Eligibility Criteria</h4>
+              <p>Turnover, experience, EMD requirements पढ़ना।</p>
+            </div>
+          </div>
+          <div class="lp2-module">
+            <div class="lp2-mod-num">07</div>
+            <div class="lp2-mod-text">
+              <h4>Pre-Bid Meetings</h4>
+              <p>Meeting का मतलब, questions तैयार करना।</p>
+            </div>
+          </div>
+          <div class="lp2-module">
+            <div class="lp2-mod-num">08</div>
+            <div class="lp2-mod-text">
+              <h4>Pricing Strategy</h4>
+              <p>Cost calculation, GST, competitive pricing।</p>
+            </div>
+          </div>
+          <div class="lp2-module">
+            <div class="lp2-mod-num">09</div>
+            <div class="lp2-mod-text">
+              <h4>Bid Preparation</h4>
+              <p>Documents, formatting, submission checklist।</p>
+            </div>
+          </div>
+          <div class="lp2-module">
+            <div class="lp2-mod-num">10</div>
+            <div class="lp2-mod-text">
+              <h4>Order Fulfilment</h4>
+              <p>Delivery, invoicing, payment tracking।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="lp2-pricing-section" id="enroll">
+      <div class="lp2-inner">
+        <div class="lp2-pricing-head">
+          <p class="lp2-section-label">Pricing</p>
+          <h2>Format चुनें और Enroll करें</h2>
+          <p>दोनों में same curriculum — अलग learning experience।</p>
+        </div>
+
+        <div class="lp2-cards">
+
+          <!-- Recorded -->
+          <div class="lp2-card">
+            <p class="lp2-card-type">Recorded Course</p>
+            <h3>अपनी Speed से सीखें</h3>
+            <div class="lp2-card-price">₹1,999</div>
+            <p class="lp2-card-price-note">One-time payment · Lifetime access</p>
+            <ul class="lp2-card-features">
+              <li>10+ modules, complete process</li>
+              <li>Lifetime access to recordings</li>
+              <li>Self-paced, watch anytime</li>
+              <li>Hindi + English</li>
+              <li>Study materials included</li>
+            </ul>
+            <div class="lp2-card-pay">
+              <form>
+                <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_U2wIMHH0D1kU4v" async></script>
+              </form>
+              <a href="https://wa.me/918007974088?text=Hi%2C%20Recorded%20course%20ke%20baare%20mein%20puchna%20tha%20enroll%20karne%20se%20pehle." class="lp2-card-ask">Questions हैं? Enroll से पहले पूछें →</a>
+              <p class="lp2-card-note">🔒 Secure · Instant access</p>
+            </div>
+          </div>
+
+          <!-- Live -->
+          <div class="lp2-card lp2-card-featured">
+            <div class="lp2-card-popular">⭐ Most Popular</div>
+            <p class="lp2-card-type">Live Classes</p>
+            <h3>Instructor के साथ Live</h3>
+            <div class="lp2-card-price">₹3,999</div>
+            <p class="lp2-card-price-note">One-time payment · Batch + recordings</p>
+            <ul class="lp2-card-features">
+              <li>सब कुछ Recorded में + ये:</li>
+              <li>Live interactive sessions</li>
+              <li>Real-time doubt solving</li>
+              <li>Live Q&A with instructor</li>
+              <li>Batch discussion group</li>
+              <li>Session recordings access</li>
+            </ul>
+            <div class="lp2-card-pay">
+              <form>
+                <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_U2mcnLJXkNbIbY" async></script>
+              </form>
+              <a href="https://wa.me/918007974088?text=Hi%2C%20Live%20classes%20ke%20baare%20mein%20puchna%20tha%20enroll%20karne%20se%20pehle." class="lp2-card-ask">Questions हैं? Enroll से पहले पूछें →</a>
+              <p class="lp2-card-note">🔒 Secure · Batch details after payment</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lp2-secure-row">
+          <div class="lp2-secure-item"><span>🔒</span><span>Razorpay secure payment</span></div>
+          <div class="lp2-secure-item"><span>⚡</span><span>Instant access</span></div>
+          <div class="lp2-secure-item"><span>🏦</span><span>UPI / Card / Net Banking</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="lp2-section">
+      <div class="lp2-inner">
+        <p class="lp2-section-label">FAQs</p>
+        <h2>आपके सवाल</h2>
+        <p class="lp2-sub" style="margin-bottom:2rem;">कुछ common questions के जवाब।</p>
+        <div class="lp2-faq-grid">
+          <div class="lp2-faq-item">
+            <h3>क्या बिना experience के course कर सकते हैं?</h3>
+            <p>हाँ। Course specifically beginners के लिए है। GeM के बारे में कुछ नहीं जानते तो भी चलेगा।</p>
+          </div>
+          <div class="lp2-faq-item">
+            <h3>Course कितने time में complete होगा?</h3>
+            <p>Recorded में अपनी speed से — आमतौर पर 2–3 हफ्ते। Live batch की duration WhatsApp पर confirm होती है।</p>
+          </div>
+          <div class="lp2-faq-item">
+            <h3>क्या orders मिलना guaranteed है?</h3>
+            <p>नहीं। Course process सिखाता है। Orders मिलना bid conditions, documents, pricing पर depend करता है।</p>
+          </div>
+          <div class="lp2-faq-item">
+            <h3>Payment कैसे करें?</h3>
+            <p>Razorpay से — UPI, card, net banking सब चलता है। Payment के बाद instant access मिलता है।</p>
+          </div>
+          <div class="lp2-faq-item">
+            <h3>Manufacturer होना जरूरी है?</h3>
+            <p>नहीं। Reseller भी GeM पर sell कर सकते हैं। Course में OEM और reseller दोनों roles explain होती हैं।</p>
+          </div>
+          <div class="lp2-faq-item">
+            <h3>Recorded और Live में क्या फर्क है?</h3>
+            <p>Curriculum same है। Recorded self-paced है (₹1,999), Live में real-time interaction है (₹3,999)।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="lp2-final">
+      <div class="lp2-final-box">
+        <h2>GeM सीखना शुरू करें आज</h2>
+        <p>500+ students already enrolled हैं। ₹1,999 से शुरू करें।</p>
+        <a href="#enroll" class="lp2-btn-primary" style="display:inline-block;text-decoration:none;">Enroll Now →</a>
+        <p class="lp2-final-trust">🔒 Secure Payment &nbsp;·&nbsp; ⚡ Instant Access &nbsp;·&nbsp; ♾️ Lifetime</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="lp2-footer">
+    <p><a href="index.html" style="color:#223072;font-weight:600;">The Growth Adda</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/thegrowthadda.in/" target="_blank" rel="noopener" style="color:#6b7390;">@thegrowthadda.in</a></p>
+    <p>The Growth Adda is an independent education platform, not affiliated with Government e-Marketplace. Course participation does not guarantee tender eligibility, award or income.</p>
+    <p>© 2026 The Growth Adda</p>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
