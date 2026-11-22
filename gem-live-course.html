@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1a2456">
+  <title>GeM Live Course — ₹3,999 | The Growth Adda</title>
+  <meta name="description" content="GeM Live Classes — Registration से bid submission तक। Live instructor, doubt solving, recordings। ₹3,999।">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a2456;
+      --navy2: #2c3777;
+      --gold: #f2b63c;
+      --gold-dark: #d9960a;
+      --white: #ffffff;
+      --off: #f5f7fc;
+      --muted: #6b7390;
+      --ink: #1c2340;
+      --line: #e7eaf2;
+      --green: #2a9d55;
+      --radius: 14px;
+      --font: "Noto Sans Devanagari", system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: var(--font);
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button { font: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ─── HEADER ─── */
+    .hdr {
+      position: sticky; top: 0; z-index: 99;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1.25rem;
+      height: 56px;
+    }
+    .hdr-brand {
+      display: flex; align-items: center; gap: 0.5rem;
+      text-decoration: none; color: var(--white);
+      font-size: 0.9375rem; font-weight: 700;
+    }
+    .hdr-logo {
+      width: 30px; height: 30px; border-radius: 8px;
+      background: var(--gold); display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .hdr-cta {
+      background: var(--gold); color: var(--ink);
+      font-size: 0.875rem; font-weight: 700;
+      padding: 0.5rem 1.25rem; border-radius: 8px;
+      text-decoration: none; white-space: nowrap;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 100%);
+      padding: 2.5rem 1.25rem 3rem;
+      text-align: center;
+      color: var(--white);
+    }
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(242,182,60,0.15);
+      border: 1px solid rgba(242,182,60,0.35);
+      color: #ffd25a;
+      font-size: 0.8125rem; font-weight: 600;
+      padding: 0.35rem 1rem; border-radius: 50px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.75rem, 6vw, 2.75rem);
+      font-weight: 800; line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero-sub {
+      font-size: 1.0625rem; color: rgba(255,255,255,0.82);
+      line-height: 1.65; max-width: 520px; margin: 0 auto 2rem;
+    }
+
+    /* chips */
+    .hero-chips {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.625rem;
+      margin-bottom: 2.25rem;
+    }
+    .chip {
+      display: flex; align-items: center; gap: 0.4rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 0.45rem 0.9rem; border-radius: 50px;
+      font-size: 0.875rem; font-weight: 500;
+    }
+
+    /* hero price box */
+    .hero-price-box {
+      background: var(--white); color: var(--ink);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      max-width: 400px; margin: 0 auto;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+    }
+    .hero-price-label {
+      font-size: 0.8125rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.5rem;
+    }
+    .hero-price {
+      font-size: 3.5rem; font-weight: 900; color: var(--navy);
+      line-height: 1; margin-bottom: 0.375rem;
+    }
+    .hero-price-note {
+      font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem;
+    }
+    .hero-price-box form { margin: 0; }
+    .hero-price-box .rzp-wrap { width: 100%; }
+
+    .hero-secure {
+      display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+      font-size: 0.8125rem; color: var(--muted); margin-top: 0.875rem;
+    }
+
+    /* ─── PROOF BAR ─── */
+    .proof {
+      background: var(--off);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 1.5rem 1.25rem;
+    }
+    .proof-row {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 0.5rem 2rem;
+      max-width: 600px; margin: 0 auto;
+    }
+    .proof-item {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-size: 0.9375rem; font-weight: 600; color: var(--navy);
+    }
+    .proof-dot { color: var(--gold); font-size: 1.1rem; }
+
+    /* ─── SECTION BASE ─── */
+    .sec { padding: 3rem 1.25rem; }
+    .sec-alt { background: var(--off); }
+    .inner { max-width: 680px; margin: 0 auto; }
+
+    .sec-label {
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--gold-dark); margin-bottom: 0.5rem;
+    }
+    .sec h2 {
+      font-size: clamp(1.375rem, 4vw, 2rem);
+      font-weight: 800; color: var(--navy);
+      margin-bottom: 0.625rem; line-height: 1.25;
+    }
+    .sec-sub { font-size: 1rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.65; }
+
+    /* ─── INCLUDES LIST ─── */
+    .includes { display: flex; flex-direction: column; gap: 0.875rem; }
+    .inc-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      background: var(--white); border: 1.5px solid var(--line);
+      border-radius: 12px; padding: 1.125rem 1.25rem;
+    }
+    .inc-icon {
+      font-size: 1.5rem; flex-shrink: 0;
+      width: 42px; height: 42px; border-radius: 10px;
+      background: #f0f4ff;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .inc-text strong { display: block; font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; }
+    .inc-text span { font-size: 0.9rem; color: var(--muted); }
+
+    /* ─── CURRICULUM ─── */
+    .modules { display: flex; flex-direction: column; gap: 0.75rem; }
+    .module {
+      display: flex; gap: 1rem; align-items: flex-start;
+      background: var(--white); border: 1.5px solid var(--line);
+      border-radius: 12px; padding: 1rem 1.25rem;
+    }
+    .mod-num {
+      background: var(--navy); color: var(--white);
+      font-size: 0.8125rem; font-weight: 800;
+      min-width: 34px; height: 34px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .mod-info strong { font-size: 0.9375rem; font-weight: 700; color: var(--navy); }
+    .mod-info span { display: block; font-size: 0.875rem; color: var(--muted); margin-top: 0.15rem; }
+
+    /* ─── PRICING SECTION ─── */
+    .pricing-sec {
+      background: var(--navy);
+      padding: 3rem 1.25rem;
+      text-align: center;
+    }
+    .pricing-sec .sec-label { color: var(--gold); }
+    .pricing-sec h2 { color: var(--white); margin-bottom: 0.5rem; }
+    .pricing-sec p { color: rgba(255,255,255,0.75); margin-bottom: 2rem; font-size: 1rem; }
+
+    .price-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.25rem 1.75rem;
+      max-width: 440px; margin: 0 auto;
+      box-shadow: 0 12px 50px rgba(0,0,0,0.3);
+    }
+    .price-card-label {
+      font-size: 0.8125rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.5rem;
+    }
+    .price-card h3 { font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: 1.5rem; }
+    .price-big { font-size: 4rem; font-weight: 900; color: var(--navy); line-height: 1; }
+    .price-once { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.75rem; margin-top: 0.25rem; }
+
+    .price-features {
+      list-style: none; text-align: left;
+      border-top: 1px solid var(--line); padding-top: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex; flex-direction: column; gap: 0.75rem;
+    }
+    .price-features li {
+      display: flex; align-items: center; gap: 0.625rem;
+      font-size: 0.9375rem; color: var(--ink);
+    }
+    .price-features li::before {
+      content: '✓';
+      color: var(--green); font-weight: 700; font-size: 1.0625rem;
+      flex-shrink: 0;
+    }
+
+    .price-card form { margin: 0; }
+    .price-card .ask-link {
+      display: block; text-align: center; margin-top: 1rem;
+      font-size: 0.9rem; color: var(--muted); text-decoration: none;
+    }
+    .price-card .ask-link:hover { color: var(--navy); text-decoration: underline; }
+    .price-secure { font-size: 0.8125rem; color: rgba(255,255,255,0.5); margin-top: 1.5rem; }
+
+    /* ─── FAQ ─── */
+    .faq-list { display: flex; flex-direction: column; gap: 1rem; }
+    .faq-item {
+      border: 1.5px solid var(--line); border-radius: 12px; overflow: hidden;
+    }
+    .faq-q {
+      width: 100%; text-align: left;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      padding: 1.125rem 1.25rem;
+      font-size: 0.9375rem; font-weight: 600; color: var(--navy);
+      background: var(--white); cursor: pointer;
+    }
+    .faq-q .faq-icon {
+      font-size: 1.25rem; color: var(--muted);
+      flex-shrink: 0; transition: transform 0.25s;
+    }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      padding: 0 1.25rem; max-height: 0; overflow: hidden;
+      font-size: 0.9375rem; color: var(--muted); line-height: 1.65;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      background: var(--off);
+    }
+    .faq-a.open { max-height: 300px; padding: 1rem 1.25rem 1.25rem; }
+
+    /* ─── BOTTOM CTA ─── */
+    .bottom-cta {
+      background: var(--gold);
+      padding: 2.5rem 1.25rem;
+      text-align: center;
+    }
+    .bottom-cta h2 { font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; }
+    .bottom-cta p { font-size: 1rem; color: rgba(28,35,64,0.75); margin-bottom: 1.75rem; }
+    .bottom-cta form { max-width: 320px; margin: 0 auto; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy); color: rgba(255,255,255,0.5);
+      padding: 1.75rem 1.25rem; text-align: center;
+      font-size: 0.8125rem; line-height: 1.7;
+    }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+
+    /* ─── STICKY BOTTOM BAR (mobile) ─── */
+    .sticky-pay {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 98;
+      background: var(--white);
+      border-top: 2px solid var(--gold);
+      padding: 0.875rem 1.25rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
+    }
+    .sticky-pay-price { font-size: 1.5rem; font-weight: 900; color: var(--navy); line-height: 1; }
+    .sticky-pay-note { font-size: 0.75rem; color: var(--muted); }
+    .sticky-pay form { flex-shrink: 0; margin: 0; }
+
+    /* hide sticky on large screens */
+    @media(min-width:720px){ .sticky-pay { display: none; } }
+
+    /* ─── RESPONSIVE ─── */
+    @media(min-width:600px){
+      .hero-price-box { padding: 2.25rem 2rem; }
+      .price-card { padding: 2.5rem 2.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="hdr">
+    <a class="hdr-brand" href="index.html">
+      <div class="hdr-logo">🚀</div>
+      <span>The Growth Adda</span>
+    </a>
+    <a class="hdr-cta" href="#pay">Enroll — ₹3,999</a>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-pill">🎓 Live Classes &nbsp;·&nbsp; Limited Seats</div>
+
+    <h1>GeM पर Business<br><em>Live Classes में सीखिए।</em></h1>
+
+    <p class="hero-sub">
+      Registration से bid submission तक — instructor के साथ live सीखें, real-time doubts solve करें।
+    </p>
+
+    <div class="hero-chips">
+      <div class="chip">🎙️ Live Instructor</div>
+      <div class="chip">❓ Doubts Live Solve</div>
+      <div class="chip">🎥 Recordings Included</div>
+      <div class="chip">🗣️ Hindi + English</div>
+    </div>
+
+    <div class="hero-price-box">
+      <p class="hero-price-label">GeM Live Course</p>
+      <div class="hero-price">₹3,999</div>
+      <p class="hero-price-note">One-time · सब included</p>
+      <div class="rzp-wrap">
+        <form>
+          <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_U2mcnLJXkNbIbY" async></script>
+        </form>
+      </div>
+      <p class="hero-secure">🔒 Razorpay secure checkout · UPI / Card / Net Banking</p>
+    </div>
+  </section>
+
+
+  <!-- PROOF BAR -->
+  <div class="proof">
+    <div class="proof-row">
+      <div class="proof-item"><span class="proof-dot">★</span> 500+ Students</div>
+      <div class="proof-item"><span class="proof-dot">★</span> Live Instructor</div>
+      <div class="proof-item"><span class="proof-dot">★</span> Recordings Lifetime</div>
+      <div class="proof-item"><span class="proof-dot">★</span> Instant Access</div>
+    </div>
+  </div>
+
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="sec">
+    <div class="inner">
+      <p class="sec-label">Course में क्या मिलेगा</p>
+      <h2>सब कुछ एक जगह</h2>
+      <p class="sec-sub">₹3,999 में यह सब included है।</p>
+
+      <div class="includes">
+        <div class="inc-item">
+          <div class="inc-icon">🎙️</div>
+          <div class="inc-text">
+            <strong>Live Interactive Sessions</strong>
+            <span>Instructor के साथ live classes। Real examples, screen sharing।</span>
+          </div>
+        </div>
+        <div class="inc-item">
+          <div class="inc-icon">❓</div>
+          <div class="inc-text">
+            <strong>Real-time Doubt Solving</strong>
+            <span>Class में directly पूछो। तुरंत जवाब मिलेगा।</span>
+          </div>
+        </div>
+        <div class="inc-item">
+          <div class="inc-icon">🎥</div>
+          <div class="inc-text">
+            <strong>Session Recordings</strong>
+            <span>Miss हो गया? Lifetime recordings access। कभी भी देखो।</span>
+          </div>
+        </div>
+        <div class="inc-item">
+          <div class="inc-icon">📋</div>
+          <div class="inc-text">
+            <strong>Complete Curriculum</strong>
+            <span>GeM registration से order fulfilment तक। A to Z process।</span>
+          </div>
+        </div>
+        <div class="inc-item">
+          <div class="inc-icon">👥</div>
+          <div class="inc-text">
+            <strong>Batch Group Access</strong>
+            <span>Batch के students के साथ group। Discussions, shared learning।</span>
+          </div>
+        </div>
+        <div class="inc-item">
+          <div class="inc-icon">📄</div>
+          <div class="inc-text">
+            <strong>Study Materials</strong>
+            <span>Notes, checklists, templates — सब PDF में।</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CURRICULUM -->
+  <section class="sec sec-alt" id="curriculum">
+    <div class="inner">
+      <p class="sec-label">Curriculum</p>
+      <h2>क्या-क्या सिखाया जाएगा</h2>
+      <p class="sec-sub">10 modules में GeM का complete process।</p>
+
+      <div class="modules">
+        <div class="module">
+          <div class="mod-num">01</div>
+          <div class="mod-info">
+            <strong>GeM क्या है</strong>
+            <span>Portal overview, buyer-seller roles, basic workflow।</span>
+          </div>
+        </div>
+        <div class="module">
+          <div class="mod-num">02</div>
+          <div class="mod-info">
+            <strong>Seller Registration</strong>
+            <span>Documents, verification, profile setup step by step।</span>
+          </div>
+        </div>
+        <div class="module">
+          <div class="mod-num">03</div>
+          <div class="mod-info">
+            <strong>OEM vs Reseller</strong>
+            <span>Manufacturer और dealer की roles, authorisation।</span>
+          </div>
+        </div>
+        <div class="module">
+          <div class="mod-num">04</div>
+          <div class="mod-info">
+            <strong>Product Listing & Categories</strong>
+            <span>सही category, specifications, catalogue।</span>
+          </div>
+        </div>
+        <div class="module">
+          <div class="mod-num">05</div>
+          <div class="mod-info">
+            <strong>Tenders खोजना</strong>
+            <span>Relevant bids ढूंढना, filter करना।</span>
+          </div>
+        </div>
+        <div class="module">
+          <div class="mod-num">06</div>
+          <div class="mod-info">
+            <strong>Eligibility पढ़ना</strong>
+            <span>Turnover, EMD, experience requirements।</span>
+          </div>
+        </div>
+        <div class="module">
+          <div class="mod-num">07</div>
+          <div class="mod-info">
+            <strong>Pre-Bid Meetings</strong>
+            <span>Meeting का मतलब, questions तैयार करना।</span>
+          </div>
+        </div>
+        <div class="module">
+          <div class="mod-num">08</div>
+          <div class="mod-info">
+            <strong>Pricing Strategy</strong>
+            <span>Costing, GST, competitive rates।</span>
+          </div>
+        </div>
+        <div class="module">
+          <div class="mod-num">09</div>
+          <div class="mod-info">
+            <strong>Bid Submit करना</strong>
+            <span>Documents, format, submission checklist।</span>
+          </div>
+        </div>
+        <div class="module">
+          <div class="mod-num">10</div>
+          <div class="mod-info">
+            <strong>Order Fulfilment</strong>
+            <span>Delivery, invoice, payment tracking।</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PRICING -->
+  <section class="pricing-sec" id="pay">
+    <p class="sec-label">Enroll करें</p>
+    <h2>एक बार pay करें, सब मिलेगा</h2>
+    <p>Live classes + Recordings + Support — सब ₹3,999 में।</p>
+
+    <div class="price-card">
+      <p class="price-card-label">GeM Live Course</p>
+      <h3>Live Classes with Instructor</h3>
+      <div class="price-big">₹3,999</div>
+      <p class="price-once">One-time payment · No hidden charges</p>
+
+      <ul class="price-features">
+        <li>Live interactive sessions</li>
+        <li>Real-time doubt solving</li>
+        <li>Lifetime session recordings</li>
+        <li>Batch discussion group</li>
+        <li>Study materials + templates</li>
+        <li>Certificate of completion</li>
+        <li>Hindi + English instruction</li>
+      </ul>
+
+      <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_U2mcnLJXkNbIbY" async></script>
+      </form>
+
+      <a class="ask-link" href="https://wa.me/918007974088?text=Hi%2C%20GeM%20Live%20course%20ke%20baare%20mein%20kuch%20puchna%20tha%20enroll%20karne%20se%20pehle.">
+        कोई सवाल है? Enroll से पहले पूछें →
+      </a>
+    </div>
+
+    <p class="price-secure">🔒 Razorpay &nbsp;·&nbsp; UPI / Card / Net Banking / Wallet</p>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="sec">
+    <div class="inner">
+      <p class="sec-label">FAQs</p>
+      <h2>Common Questions</h2>
+      <p class="sec-sub" style="margin-bottom:1.75rem;">कुछ important सवालों के जवाब।</p>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Live classes की timing क्या होगी?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            Batch की exact timing और start date WhatsApp पर share की जाती है। Payment के बाद confirm होगी। Working professionals के लिए convenient slots रखे जाते हैं।
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>अगर कोई session miss हो जाए?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            कोई problem नहीं। हर session record होती है। Lifetime access मिलेगा — missed sessions बाद में देख सकते हो।
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>क्या beginners यह course कर सकते हैं?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            हाँ। Course बिल्कुल शुरू से design किया गया है। GeM के बारे में पहले से कुछ नहीं जानते तो भी चलेगा।
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>क्या orders मिलना guaranteed है?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            नहीं। Course process सिखाता है — registration, documents, bidding। Orders मिलना bid conditions, pricing और buyer evaluation पर depend करता है। हम process सिखाते हैं।
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Payment के बाद क्या होगा?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            Payment confirm होते ही WhatsApp पर batch details और joining information मिल जाएगी।
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <h2>अभी Enroll करें</h2>
+    <p>Limited seats हैं। आज ही अपनी जगह confirm करें।</p>
+    <form>
+      <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_U2mcnLJXkNbIbY" async></script>
+    </form>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong style="color:rgba(255,255,255,0.8)">The Growth Adda</strong></p>
+    <p>Independent GeM learning platform. Not affiliated with Government e-Marketplace.</p>
+    <p>Course participation does not guarantee tender eligibility, award or income.</p>
+    <p style="margin-top:0.75rem"><a href="index.html">Home</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/thegrowthadda.in/" target="_blank" rel="noopener">Instagram</a></p>
+    <p style="margin-top:0.5rem">© 2026 The Growth Adda</p>
+  </footer>
+
+
+  <!-- STICKY BOTTOM BAR (mobile only) -->
+  <div class="sticky-pay">
+    <div>
+      <div class="sticky-pay-price">₹3,999</div>
+      <div class="sticky-pay-note">GeM Live Course · One-time</div>
+    </div>
+    <form>
+      <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_U2mcnLJXkNbIbY" async></script>
+    </form>
+  </div>
+
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // close all
+        document.querySelectorAll('.faq-q').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          b.nextElementSibling.classList.remove('open');
+        });
+        // open this if was closed
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          btn.nextElementSibling.classList.add('open');
+        }
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+
+</body>
+</html>
