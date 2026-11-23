@@ -58,7 +58,7 @@ window.SITE_CONFIG = {
       {
         id: "live",
         name: "Live Classes",
-        price: "₹3,999",
+        price: "₹2,999",
         tagline: "Live classes में GeM course.",
         // Dedicated page for this course (used by the "Enroll" button on cards).
         page: "live.html",
@@ -68,7 +68,7 @@ window.SITE_CONFIG = {
           "Course live classes के रूप में",
           "Batch की start date और timing payment से पहले WhatsApp पर confirm करें",
         ],
-        razorpay: { buttonId: "pl_U2mcnLJXkNbIbY", link: null },
+        razorpay: { buttonId: "pl_U3XsgZz2mwGJlJ", link: null },
       },
     ],
   },
