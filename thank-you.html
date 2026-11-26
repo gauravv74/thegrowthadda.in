@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1a2456">
+  <title>Payment Successful | The Growth Adda</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap">
+  <!-- Meta Pixel: Purchase fires once per browser session (Razorpay redirects here after a successful payment) -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1121105617218977');
+    fbq('track', 'PageView');
+    (function () {
+      var key = 'tga_purchase_tracked', done = false;
+      try { done = sessionStorage.getItem(key) === '1'; } catch (e) {}
+      if (!done) {
+        fbq('track', 'Purchase', { content_name: 'GeM Live Course', value: 2999, currency: 'INR', num_items: 1 });
+        try { sessionStorage.setItem(key, '1'); } catch (e) {}
+      }
+    })();
+  </script>
+  <style>
+    :root { --navy: #1a2456; --amber: #FFB224; --green: #2FB463; --ink: #0E1016; --muted: #5A5F6B; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Noto Sans Devanagari", system-ui, sans-serif; background: #F6F4EF; color: var(--ink); min-height: 100vh;
+      display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+    .card { width: 100%; max-width: 480px; background: #fff; border-radius: 24px; padding: 32px 24px; text-align: center;
+      box-shadow: 0 20px 60px rgba(26, 36, 86, .12); }
+    .tick { width: 76px; height: 76px; border-radius: 50%; background: var(--green); color: #fff; font-size: 40px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+    h1 { font-size: 28px; line-height: 1.2; color: var(--navy); }
+    .sub { color: var(--muted); margin-top: 8px; font-size: 16px; }
+    ol { list-style: none; text-align: left; margin: 24px 0; display: grid; gap: 12px; }
+    li { display: flex; gap: 12px; align-items: flex-start; background: #F6F4EF; border-radius: 14px; padding: 14px; font-size: 16px; }
+    li b { display: block; }
+    li span.n { flex: none; width: 30px; height: 30px; border-radius: 9px; background: var(--amber); font-weight: 800; display: flex;
+      align-items: center; justify-content: center; }
+    .wa { display: block; background: #25D366; color: #fff; text-decoration: none; font-weight: 800; padding: 15px; border-radius: 14px; font-size: 17px; }
+    .fine { color: var(--muted); font-size: 13px; margin-top: 16px; }
+    .fine a { color: inherit; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="tick">✓</div>
+    <h1>Payment ho gaya! 🎉</h1>
+    <p class="sub">GeM Live Course mein aapka swagat hai.</p>
+    <ol>
+      <li><span class="n">1</span><div><b>Team ka call</b>Hamari team jaldi aapko call karegi.</div></li>
+      <li><span class="n">2</span><div><b>WhatsApp batch group</b>Aapko batch ke group mein add kar diya jayega.</div></li>
+      <li><span class="n">3</span><div><b>Sab wahin milega</b>Class timings, live links, recordings aur PDFs.</div></li>
+    </ol>
+    <a class="wa" href="https://wa.me/918007974088?text=Namaste%2C%20maine%20GeM%20Live%20Course%20ka%20payment%20kar%20diya%20hai." target="_blank" rel="noopener">💬 WhatsApp pe confirm karo</a>
+    <p class="fine">Koi sawaal? Call / WhatsApp: <a href="tel:+918007974088">8007974088</a></p>
+  </main>
+</body>
+</html>
